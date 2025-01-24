@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker & Trading Sim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Crypto Tracker & Trading Sim</h1>
+        <div class="crypto-input">
+            <input type="text" id="cryptoSymbol" placeholder="Enter Crypto Symbol (e.g., BTCUSDT)">
+            <button onclick="fetchCryptoData()">Get Price</button>
+        </div>
+
+        <div id="cryptoData">
+            <h2 id="cryptoName"></h2>
+            <p>Price: <span id="cryptoPrice">-</span></p>
+            <p>24h Change: <span id="cryptoChange">-</span></p>
+        </div>
+
+        <div id="chartContainer">
+            <canvas id="cryptoChart"></canvas>
+        </div>
+
+        <div class="trade-section">
+            <h3>Simulate Trade</h3>
+            <input type="number" id="tradeAmount" placeholder="Enter amount to buy/sell">
+            <button onclick="buyCrypto()">Buy</button>
+            <button onclick="sellCrypto()">Sell</button>
+            <p id="portfolio">Portfolio Value: $0</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
